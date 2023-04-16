@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
+import { dataContext } from '../components/Layout/Main';
 
 
 
 const Contact = () => {
+    const data = useContext(dataContext)
+    console.log(data)
     return (
         <div>
-            Contact page
+          {data.length}
         </div>
     );
 };

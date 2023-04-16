@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartShopping, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ActiveLink from '../ActiveLink';
 const Header = () => {
     const [showNav , setShowNav] = useState(false)
@@ -21,12 +21,13 @@ const Header = () => {
            
           </div>
             {/* nav links */}
-            <ul className={`mt-8 ${showNav ? "" : "hidden" }   md:mt-0 md:flex md:space-y-0 md:space-x-6  font-bold `}>
+            <ul className={`mt-8 ${showNav ? "" : "hidden" }   md:mt-0 lg:flex md:space-y-0 md:space-x-6  font-bold `}>
                 <ActiveLink to={`/`}><li>Home</li> </ActiveLink>
-           <ActiveLink to={`/review`}> <li>Order Review</li></ActiveLink> 
+           <ActiveLink to={`/review`}> <li><FontAwesomeIcon icon={faCartShopping}/></li></ActiveLink> 
            <ActiveLink to={`/about`}><li>About</li></ActiveLink> 
            <ActiveLink to={`/contact`}><li>Contact</li></ActiveLink>
-           
+           <ActiveLink to={`/login`}><li>Log In</li></ActiveLink>
+           <ActiveLink to={`/register`}><li>Register</li></ActiveLink>
             </ul>
            
 
